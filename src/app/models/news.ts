@@ -3,8 +3,6 @@ export interface News {
   subsection: string,
   title: string,
   url: string,
-  byLine: string,
   created: Date,
   
-
 }

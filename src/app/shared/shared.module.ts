@@ -9,9 +9,6 @@ import {NewsService } from './news.service'
   imports: [
     CommonModule
   ],
-  exports:[
-    AuthService,
-    NewsService
-  ]
+  exports:[]
 })
 export class SharedModule { }

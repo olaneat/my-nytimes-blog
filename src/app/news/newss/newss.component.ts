@@ -22,6 +22,7 @@ constructor( private newsService: NewsService) { }
       news => this.news = news 
     )
   }
+  
 
   popularNews(){
     this.newsService.getPupolarNew().subscribe(

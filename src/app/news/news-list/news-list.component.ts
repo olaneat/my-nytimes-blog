@@ -1,3 +1,4 @@
+import { News } from './../../models/news';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -6,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./news-list.component.css']
 })
 export class NewsListComponent implements OnInit {
-
+  @Input() article:News;
+  
   constructor() { }
 
   ngOnInit(): void {
