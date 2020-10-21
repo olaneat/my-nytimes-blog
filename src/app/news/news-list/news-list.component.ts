@@ -1,5 +1,5 @@
-import { News } from './../../models/news';
 import { Component, OnInit, Input } from '@angular/core';
+import { News } from './../../models/news';
 
 @Component({
   selector: 'app-news-list',
@@ -13,5 +13,7 @@ export class NewsListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
 
 }

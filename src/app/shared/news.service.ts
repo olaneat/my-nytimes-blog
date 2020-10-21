@@ -14,17 +14,23 @@ export class NewsService {
   constructor(private httpCllient: HttpClient) { }
 
   private extraInfo(res:any){
-    return res.news || [];
+    return res.results || [];
   }
 
   getNews():Observable<News[]>{
-  let newsUrl = `${environment.baseUrl}/topstories/v2/home.json?api-key=${environment.key}`;                                                            
+  const newsUrl = `${environment.baseUrl}/topstories/v2/home.json?api-key=${environment.key}`;                                                            
     return this.httpCllient.get<News[]>(newsUrl).pipe(map(this.extraInfo));
   }
 
 
   getPupolarNew():Observable<News[]>{
-    let popularNewUrl = `${environment.baseUrl}/mostpopular/v2/viewed/1.json?api-key=${environment.key}`
+    const popularNewUrl = `${environment.baseUrl}/mostpopular/v2/viewed/1.json?api-key=${environment.key}`
     return this.httpCllient.get<News[]>(popularNewUrl).pipe(map(this.extraInfo))
   }
+
+  newsDetail(url:string):Observable<News>{
+    const newsUrl = url
+    return this.httpCllient.get<News>(newsUrl)
+  }
+  
 }

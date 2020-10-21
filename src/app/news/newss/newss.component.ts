@@ -8,7 +8,8 @@ import {NewsService } from '../../shared/news.service'
   styleUrls: ['./newss.component.css']
 })
 export class NewssComponent implements OnInit {
-  news: News[]
+  news: News[];
+  popularArticles: News[]
 
 constructor( private newsService: NewsService) { }
 
@@ -22,11 +23,12 @@ constructor( private newsService: NewsService) { }
       news => this.news = news 
     )
   }
+
   
 
   popularNews(){
     this.newsService.getPupolarNew().subscribe(
-      news => this.news = news
+      popularArticle => this.popularArticles = popularArticle
     )
   }
 

@@ -8,12 +8,14 @@
   </head>                                                         
   <body>
     <div id="container">
-      <div id="row">
+      <div id="news">
         <section id="myContent">
           <div id="news-list">
-            {{article.title}}
+            <p><a routerLink="{{article.url}}">{{article.title}}</a></p>
           </div>
         </section>
+      </div>
+      <div id="sideBar">
       </div>
     </div>
   </body>

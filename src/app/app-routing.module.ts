@@ -1,10 +1,12 @@
-import { NewssComponent } from './news/newss/newss.component';
 import { NgModule } from '@angular/core';
-
 import { Routes, RouterModule } from '@angular/router';
+import { NewssComponent } from './news/newss/newss.component';
+import {NewsDetailComponent } from './news/news-detail/news-detail.component';
 
 const routes: Routes = [
-  {path: '', component: NewssComponent, pathMatch: 'full' }
+  {path: '', component: NewssComponent, pathMatch: 'full' },
+  {path: ':url', component: NewsDetailComponent},
+
 ];
 
 @NgModule({
