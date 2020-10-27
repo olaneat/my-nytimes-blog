@@ -4,5 +4,6 @@ export interface News {
   title: string,
   url: string,
   created: Date,
-  multimedia: [string]
+  multimedia: object[];
 }
+

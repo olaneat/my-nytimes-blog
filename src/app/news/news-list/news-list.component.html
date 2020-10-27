@@ -7,11 +7,22 @@
     <title></title>
   </head>                                                         
   <body>
-    <div id="container">
-      <div id="news">
+    <span id="article-title">latest News</span>
+    <div class="container">
+      <div class="row" id="news">
+        <div id="latest">
+          <div id="latest-img" *ngIf="article.id === 0">
+            {{article.multimedia[3][url]}}
+          </div>
+          <div id="latest-title" *ngIf="article.id === 0">
+            {{article.title}}
+          </div>
+        </div>
         <section id="myContent">
+          <img src="{{article.multimedia[3][url]}}">
+
           <div id="news-list">
-            <p><a routerLink="{{article.url}}">{{article.title}}</a></p>
+            <p id="news"><a routerLink="{{article.url}}">{{article.title}}</a></p>
           </div>
         </section>
       </div>

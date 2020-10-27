@@ -5,15 +5,18 @@ import { NewssComponent } from './newss/newss.component';
 import { NewsListComponent } from './news-list/news-list.component';
 import { MostReadComponent } from './most-read/most-read.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { HeaderComponent } from './header/header.component';
+
 
 const Components = [
   NewssComponent,
   NewsListComponent,
   NewsDetailComponent, 
-  MostReadComponent
+  MostReadComponent,
+  HeaderComponent
 ]
 @NgModule({
-  declarations: [Components,  ],
+  declarations: [Components],
 
   imports: [
     CommonModule,

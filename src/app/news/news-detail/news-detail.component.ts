@@ -22,5 +22,5 @@ export class NewsDetailComponent implements OnInit {
     const url = this.route.snapshot.paramMap.get('url');
     this.newsService.newsDetail(url).subscribe(article => this.news = article) 
   }
-
 }
+
