@@ -1,11 +1,10 @@
 <body>
   <app-header>
   </app-header>
-
+   <span id="article-title">latest News</span>
   <app-news-list  *ngFor="let article of news" [article]="article">
+    
   </app-news-list>
 
-  <app-most-read *ngFor="let popular of popularArticles" 
-    [popularNews]="popular">
-  </app-most-read>
+ 
 </body>
