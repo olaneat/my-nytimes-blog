@@ -1,10 +1,12 @@
 export interface News {
   id: number;
-  section: string,
-  subsection: string,
+  source: string,
+  author: string,
   title: string,
   url: string,
-  created: Date,
-  multimedia: object[];
+  description: Date,
+  urlToImage: string;
+  publishedAt: Date;
+  
 }
 

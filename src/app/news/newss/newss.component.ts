@@ -15,7 +15,7 @@ constructor( private newsService: NewsService) { }
 
   ngOnInit(): void {
     this.getAllNews()
-    this.popularNews()
+ 
   }
 
   getAllNews(){

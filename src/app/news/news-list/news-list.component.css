@@ -3,11 +3,17 @@
   color: black;
 }
 
-#imgs{
-  margin-right: 2%;
+img{
+  margin-right: 5%;
+  width: 100%;
+  height: 100%;
+
 }
 #news-list{
   margin-left: 3%;
+}
+#news-list p{
+  padding: 10%;
 }
 
 #latest-news{

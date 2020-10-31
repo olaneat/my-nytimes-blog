@@ -13,18 +13,18 @@
           <div class="row" id="news">
             <div id="latest">
               <div id="latest-img" *ngIf="article.id===0">
-                <div id="img">
-                  {{article.multimedia[3].url}}
+                <div id="img"  class="col-xl-6 col-sm-10 col-lg-7 col-md-7">
+                  {{article.urlToImage}}
                 </div>
-                <div id="news-list" class="col-xl-6 col-sm-10 col-lg-7 col-md-7">
+                <div id="news-list" class="col-xl-9 col-sm-10 col-lg-9 col-md-9">
                   <p id="news"><a routerLink="{{article.url}}">{{article.title}}</a></p>
                 </div>
               </div>
               <div id="latest-news" class="row" *ngIf="article.id!==0">
                 <div id="imgs" class="col-sm-10 col-md-3 col-lg-3 col-xl-3">
-                  <img src="{{article.multimedia[3]['url']}}">
+                  <img src="{{article['urlToImage']}}">
                 </div>
-                <div id="news-list" class="col-xl-6 col-sm-10 col-lg-7 col-md-7">
+                <div id="news-list" class="col-xl-9 col-sm-10 col-lg-9 col-md-9">
                   <p id="news"><a routerLink="{{article.url}}">{{article.title}}</a></p>
                 </div>
               </div>

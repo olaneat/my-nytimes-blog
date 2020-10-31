@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl : 'https://api.nytimes.com/svc/',
-  key:'HWJG0DmiBSTsgkWMd6PDRNI0QOQIyz23'
+  baseUrl : 'https://newsapi.org/v2/top-headlines?language=en',
+  key:'d1127c71d41649bf9dfe50f31b486293'
 };
 
 /*

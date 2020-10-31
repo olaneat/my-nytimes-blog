@@ -14,11 +14,11 @@ export class NewsService {
   constructor(private httpCllient: HttpClient) { }
 
   private extraInfo(res:any){
-    return res.results || [];
+    return res.articles || [];
   }
 
   getNews():Observable<News[]>{
-  const newsUrl = `${environment.baseUrl}/topstories/v2/home.json?api-key=${environment.key}`;                                                            
+  const newsUrl = `${environment.baseUrl}&apiKey=${environment.key}`;                                                            
     return this.httpCllient.get<News[]>(newsUrl).pipe(map(this.extraInfo));
   }
 
@@ -31,6 +31,11 @@ export class NewsService {
   newsDetail(url:string):Observable<News>{
     const newsUrl = url
     return this.httpCllient.get<News>(newsUrl)
+  }
+
+  getSportNew():Observable<News[]>{
+    const url = `${environment.baseUrl}/country=gb&category=sports&apiKey=${environment.key}` 
+    return this.httpCllient.get<News[]>(url).pipe(map(this.extraInfo))
   }
   
 }

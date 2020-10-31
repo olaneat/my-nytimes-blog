@@ -6,6 +6,7 @@ import { NewsListComponent } from './news-list/news-list.component';
 import { MostReadComponent } from './most-read/most-read.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { HeaderComponent } from './header/header.component';
+import { SportsNewsComponent } from './sports-news/sports-news.component';
 
 
 const Components = [
@@ -13,7 +14,9 @@ const Components = [
   NewsListComponent,
   NewsDetailComponent, 
   MostReadComponent,
-  HeaderComponent
+  HeaderComponent,
+  SportsNewsComponent,
+  SportsNewsCListomponent
 ]
 @NgModule({
   declarations: [Components],
