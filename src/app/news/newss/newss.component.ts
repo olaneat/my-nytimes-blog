@@ -26,10 +26,6 @@ constructor( private newsService: NewsService) { }
 
   
 
-  popularNews(){
-    this.newsService.getPupolarNew().subscribe(
-      popularArticle => this.popularArticles = popularArticle
-    )
-  }
+  
 
 }

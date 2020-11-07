@@ -1,1 +1,4 @@
-<p>sports-news works!</p>
+<app-header></app-header>
+
+<app-sport-news-list *ngFor="let article of news" [article]="article" >
+</app-sport-news-list>
